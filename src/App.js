@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './components/Card';
+import Filter from './components/Filter';
 import Form from './components/Form';
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
       hasTrunfo: false,
       isSaveButtonDisabled: true,
       savedCards: [],
+      nameFilterField: '',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -25,6 +27,7 @@ class App extends React.Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
     this.checkForTrunfo = this.checkForTrunfo.bind(this);
     this.deleteCard = this.deleteCard.bind(this);
+    this.nameFilter = this.nameFilter.bind(this);
   }
 
   onInputChange({ target }) {
@@ -114,6 +117,12 @@ class App extends React.Component {
     }, () => this.checkForTrunfo());
   }
 
+  nameFilter({ target }) {
+    this.setState({
+      [target.name]: target.value,
+    });
+  }
+
   render() {
     const { savedCards } = this.state;
 
@@ -134,6 +143,7 @@ class App extends React.Component {
             <Card { ...this.state } />
           </div>
         </main>
+        <Filter { ...this.state } />
         <section className="cardList">
           { savedCards.map((card) => (<Card
             key={ card.cardName }
