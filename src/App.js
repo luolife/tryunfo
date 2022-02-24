@@ -23,6 +23,7 @@ class App extends React.Component {
     this.onInputChange = this.onInputChange.bind(this);
     this.formValidation = this.formValidation.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
+    this.checkForTrunfo = this.checkForTrunfo.bind(this);
   }
 
   onInputChange({ target }) {
@@ -67,8 +68,13 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
-      hasTrunfo: (!hasTrunfo),
-    }));
+    }), () => this.checkForTrunfo());
+  }
+
+  checkForTrunfo() {
+    const { savedCards } = this.state;
+    const testTrunfo = savedCards.some(({ cardTrunfo }) => cardTrunfo);
+    this.setState({ hasTrunfo: testTrunfo });
   }
 
   formValidation() {
