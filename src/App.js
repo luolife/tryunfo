@@ -67,7 +67,7 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
-      hasTrunfo: !hasTrunfo,
+      hasTrunfo: (!hasTrunfo),
     }));
   }
 
@@ -99,6 +99,8 @@ class App extends React.Component {
   }
 
   render() {
+    const { savedCards } = this.state;
+
     return (
       <>
         <h1>Tryunfo</h1>
@@ -108,6 +110,9 @@ class App extends React.Component {
           onSaveButtonClick={ this.onSaveButtonClick }
         />
         <Card { ...this.state } />
+        <section className="cardList">
+          { savedCards.map((card) => <Card key={ card.cardName } { ...card } />) }
+        </section>
       </>
     );
   }
