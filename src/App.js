@@ -24,6 +24,7 @@ class App extends React.Component {
     this.formValidation = this.formValidation.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
     this.checkForTrunfo = this.checkForTrunfo.bind(this);
+    this.deleteCard = this.deleteCard.bind(this);
   }
 
   onInputChange({ target }) {
@@ -104,20 +105,42 @@ class App extends React.Component {
     }
   }
 
+  deleteCard(name) {
+    const { savedCards } = this.state;
+    const newDeck = savedCards
+      .filter(({ cardName }) => cardName !== name);
+    this.setState({
+      savedCards: newDeck,
+    }, () => this.checkForTrunfo());
+  }
+
   render() {
     const { savedCards } = this.state;
 
     return (
       <>
         <h1>Tryunfo</h1>
-        <Form
-          { ...this.state }
-          onInputChange={ this.onInputChange }
-          onSaveButtonClick={ this.onSaveButtonClick }
-        />
-        <Card { ...this.state } />
+        <main className="main-container">
+          <div className="form-title-container">
+            <h2>Adicionar nova carta</h2>
+            <Form
+              { ...this.state }
+              onInputChange={ this.onInputChange }
+              onSaveButtonClick={ this.onSaveButtonClick }
+            />
+          </div>
+          <div className="preview-title-container">
+            <h2>Preview</h2>
+            <Card { ...this.state } />
+          </div>
+        </main>
         <section className="cardList">
-          { savedCards.map((card) => <Card key={ card.cardName } { ...card } />) }
+          { savedCards.map((card) => (<Card
+            key={ card.cardName }
+            deleteBtn
+            deleteCard={ this.deleteCard }
+            { ...card }
+          />)) }
         </section>
       </>
     );
