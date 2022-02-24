@@ -65,6 +65,9 @@ class App extends React.Component {
       cardAttr3: '0',
       cardImage: '',
       cardRare: 'normal',
+      cardTrunfo: false,
+      isSaveButtonDisabled: true,
+      hasTrunfo: !hasTrunfo,
     }));
   }
 
@@ -96,34 +99,15 @@ class App extends React.Component {
   }
 
   render() {
-    const { state } = this;
-
     return (
       <>
         <h1>Tryunfo</h1>
         <Form
+          { ...this.state }
           onInputChange={ this.onInputChange }
-          cardName={ state.cardName }
-          cardDescription={ state.cardDescription }
-          cardAttr1={ state.cardAttr1 }
-          cardAttr2={ state.cardAttr2 }
-          cardAttr3={ state.cardAttr3 }
-          cardImage={ state.cardImage }
-          cardRare={ state.cardRare }
-          cardTrunfo={ state.cardTrunfo }
-          isSaveButtonDisabled={ state.isSaveButtonDisabled }
           onSaveButtonClick={ this.onSaveButtonClick }
         />
-        <Card
-          cardName={ state.cardName }
-          cardDescription={ state.cardDescription }
-          cardAttr1={ state.cardAttr1 }
-          cardAttr2={ state.cardAttr2 }
-          cardAttr3={ state.cardAttr3 }
-          cardImage={ state.cardImage }
-          cardRare={ state.cardRare }
-          cardTrunfo={ state.cardTrunfo }
-        />
+        <Card { ...this.state } />
       </>
     );
   }
