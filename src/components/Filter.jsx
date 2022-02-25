@@ -5,6 +5,7 @@ class Filter extends Component {
   render() {
     const { filterChange, nameFilterField } = this.props;
     const { rarityFilterField } = this.props;
+    const { trunfoFilter } = this.props;
 
     return (
       <div>
@@ -17,6 +18,7 @@ class Filter extends Component {
             data-testid="name-filter"
             value={ nameFilterField }
             onChange={ filterChange }
+            disabled={ trunfoFilter }
           />
         </label>
         <label htmlFor="rarityFilterField">
@@ -26,6 +28,7 @@ class Filter extends Component {
             data-testid="rare-filter"
             value={ rarityFilterField }
             onChange={ filterChange }
+            disabled={ trunfoFilter }
           >
             <option value="">todas</option>
             <option value="normal">normal</option>
@@ -51,6 +54,7 @@ Filter.propTypes = {
   filterChange: PropTypes.func.isRequired,
   nameFilterField: PropTypes.string.isRequired,
   rarityFilterField: PropTypes.string.isRequired,
+  trunfoFilter: PropTypes.bool.isRequired,
 };
 
 export default Filter;
