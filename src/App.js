@@ -21,6 +21,7 @@ class App extends React.Component {
       savedCards: [],
       nameFilterField: '',
       rarityFilterField: '',
+      trunfoFilter: false,
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -119,12 +120,19 @@ class App extends React.Component {
   }
 
   filterChange({ target }) {
+    const { name } = target;
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
     this.setState({
-      [target.name]: target.value });
+      [name]: value });
   }
 
   render() {
-    const { savedCards, nameFilterField, rarityFilterField } = this.state;
+    const { savedCards, nameFilterField, rarityFilterField, trunfoFilter } = this.state;
+    const filteredCards = savedCards
+      .filter(({ cardName }) => cardName.includes(nameFilterField))
+      .filter((card) => ((rarityFilterField === '')
+        ? card
+        : card.cardRare === rarityFilterField));
 
     return (
       <>
@@ -148,17 +156,21 @@ class App extends React.Component {
           filterChange={ this.filterChange }
         />
         <section className="cardList">
-          { savedCards
-            .filter(({ cardName }) => cardName.includes(nameFilterField))
-            .filter((card) => ((rarityFilterField === '')
-              ? card
-              : card.cardRare === rarityFilterField))
-            .map((card) => (<Card
-              key={ card.cardName }
-              deleteBtn
-              deleteCard={ this.deleteCard }
-              { ...card }
-            />)) }
+          {!trunfoFilter
+            ? (filteredCards
+              .map((card) => (<Card
+                key={ card.cardName }
+                deleteBtn
+                deleteCard={ this.deleteCard }
+                { ...card }
+              />)))
+            : (savedCards.filter(({ cardTrunfo }) => cardTrunfo)
+              .map((card) => (<Card
+                key={ card.cardName }
+                deleteCard={ this.deleteCard }
+                deleteBtn
+                { ...card }
+              />)))}
         </section>
       </>
     );

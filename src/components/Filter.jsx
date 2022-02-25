@@ -33,6 +33,15 @@ class Filter extends Component {
             <option value="muito raro">muito raro</option>
           </select>
         </label>
+        <label htmlFor="trunfoFilter">
+          SuperTrybeTrunfo
+          <input
+            type="checkbox"
+            name="trunfoFilter"
+            data-testid="trunfo-filter"
+            onChange={ filterChange }
+          />
+        </label>
       </div>
     );
   }
