@@ -20,6 +20,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       savedCards: [],
       nameFilterField: '',
+      rarityFilterField: '',
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -27,7 +28,7 @@ class App extends React.Component {
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
     this.checkForTrunfo = this.checkForTrunfo.bind(this);
     this.deleteCard = this.deleteCard.bind(this);
-    this.nameFilter = this.nameFilter.bind(this);
+    this.filterChange = this.filterChange.bind(this);
   }
 
   onInputChange({ target }) {
@@ -117,14 +118,13 @@ class App extends React.Component {
     }, () => this.checkForTrunfo());
   }
 
-  nameFilter({ target }) {
+  filterChange({ target }) {
     this.setState({
-      [target.name]: target.value,
-    });
+      [target.name]: target.value });
   }
 
   render() {
-    const { savedCards } = this.state;
+    const { savedCards, nameFilterField, rarityFilterField } = this.state;
 
     return (
       <>
@@ -143,14 +143,22 @@ class App extends React.Component {
             <Card { ...this.state } />
           </div>
         </main>
-        <Filter { ...this.state } />
+        <Filter
+          { ...this.state }
+          filterChange={ this.filterChange }
+        />
         <section className="cardList">
-          { savedCards.map((card) => (<Card
-            key={ card.cardName }
-            deleteBtn
-            deleteCard={ this.deleteCard }
-            { ...card }
-          />)) }
+          { savedCards
+            .filter(({ cardName }) => cardName.includes(nameFilterField))
+            .filter((card) => ((rarityFilterField === '')
+              ? card
+              : card.cardRare === rarityFilterField))
+            .map((card) => (<Card
+              key={ card.cardName }
+              deleteBtn
+              deleteCard={ this.deleteCard }
+              { ...card }
+            />)) }
         </section>
       </>
     );
