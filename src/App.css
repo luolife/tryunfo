@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.main-container {
+  border-bottom: 3px solid #023031;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.form-title-container {
+  align-items: center;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
+  width: 50%;
+}
+
+.form-title-subcontainer {
+  height: 95%;
+  width: 50%;
+}
+
+.preview-title-container {
+  align-items: center;
+  background-color: #023031;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
+  width: 50%;
+}
+
+.preview-title-subcontainer {
+  height: 95%;
+  width: 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  font-size: 1.7em;
+  margin-bottom: 1em;
+}
+
+.form label {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.label-up {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-with-btn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 260px;
+}
+
+.card-with-btn button {
+  width: 50%;
+}
+
+.card {
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  color: black;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  margin: auto;
+  width: 260px;
+}
+
+.card-second-border {
+  align-items: center;
+  background-color: #036b52;
+  border-radius: 8px;
+  display: flex;
+  height: 385px;
+  justify-content: center;
+  padding: 5px;
+  width: 245px;
+}
+
+.card-subcontainer {
+  background-color: whitesmoke;
+  border-radius: 6px;
+  height: 370px;
+  width: 230px;
+}
+
+.name-card {
+  background-color: #023031;
+  border-radius: 6px 6px 0 0;
+  color: whitesmoke;
+  font-size: 1.35em;
+  min-height: 32px;
+  padding: 2px 0 2px 5px;
+}
+
+.description-card {
+  background-color: rgb(3, 107, 82);
+  font-size: 0.7em;
+
+  /* por algum motivo existia um espaço entre a descrição e o elemento de cima */
+  margin-top: -4px;
+  padding: 5px 0;
+}
+
+.image-card {
+  height: 40%;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+.attribute-container {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 8px 0;
+  padding-left: 5px;
+}
+
+.attribute-value {
+  background-color: #044344;
+  border-bottom-right-radius: 10px;
+  color: whitesmoke;
+  padding: 1px 7px 1px 5px;
+}

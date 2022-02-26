@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './components/Card';
 import Filter from './components/Filter';
 import Form from './components/Form';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {

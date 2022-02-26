@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Attribute from './Attribute';
 
 class Card extends Component {
   render() {
@@ -17,25 +18,27 @@ class Card extends Component {
     } = this.props;
 
     return (
-      <div className="card">
-        <div className="card-subcontainer">
-          <h2 data-testid="name-card" className="name-card">{ cardName }</h2>
-          <div className="image-card-container">
-            <img
-              data-testid="image-card"
-              src={ cardImage }
-              alt={ cardName }
-              className="image-card"
-            />
+      <div className="card-with-btn">
+        <div className="card">
+          <div className="card-second-border">
+            <div className="card-subcontainer">
+              <h2 data-testid="name-card" className="name-card">{ cardName }</h2>
+              <img
+                data-testid="image-card"
+                src={ cardImage }
+                alt={ cardName }
+                className="image-card"
+              />
+              <p data-testid="description-card" className="description-card">
+                { cardDescription }
+              </p>
+              <Attribute datatestid="attr1-card" attribute={ cardAttr1 } attNumber="1" />
+              <Attribute datatestid="attr2-card" attribute={ cardAttr2 } attNumber="2" />
+              <Attribute datatestid="attr3-card" attribute={ cardAttr3 } attNumber="3" />
+              <h3 data-testid="rare-card" className="rare-card">{ cardRare }</h3>
+              { cardTrunfo && <h2 data-testid="trunfo-card">Super Trunfo</h2> }
+            </div>
           </div>
-          <p data-testid="description-card" className="description-card">
-            { cardDescription }
-          </p>
-          <h3 data-testid="attr1-card" className="attributes">{ cardAttr1 }</h3>
-          <h3 data-testid="attr2-card" className="attributes">{ cardAttr2 }</h3>
-          <h3 data-testid="attr3-card" className="attributes">{ cardAttr3 }</h3>
-          <h3 data-testid="rare-card" className="rare-card">{ cardRare }</h3>
-          { cardTrunfo && <h2 data-testid="trunfo-card">Super Trunfo</h2> }
         </div>
         { deleteBtn && (
           <button
