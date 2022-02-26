@@ -17,15 +17,17 @@ class Card extends Component {
     } = this.props;
 
     return (
-      <>
-        <div className="card">
+      <div className="card">
+        <div className="card-subcontainer">
           <h2 data-testid="name-card" className="name-card">{ cardName }</h2>
-          <img
-            data-testid="image-card"
-            src={ cardImage }
-            alt={ cardName }
-            className="image-card"
-          />
+          <div className="image-card-container">
+            <img
+              data-testid="image-card"
+              src={ cardImage }
+              alt={ cardName }
+              className="image-card"
+            />
+          </div>
           <p data-testid="description-card" className="description-card">
             { cardDescription }
           </p>
@@ -44,7 +46,7 @@ class Card extends Component {
           >
             Excluir
           </button>) }
-      </>
+      </div>
     );
   }
 }

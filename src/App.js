@@ -136,19 +136,22 @@ class App extends React.Component {
 
     return (
       <>
-        <h1>Tryunfo</h1>
         <main className="main-container">
           <div className="form-title-container">
-            <h2>Adicionar nova carta</h2>
-            <Form
-              { ...this.state }
-              onInputChange={ this.onInputChange }
-              onSaveButtonClick={ this.onSaveButtonClick }
-            />
+            <div className="form-title-subcontainer">
+              <h2 className="title">Adicionar nova carta</h2>
+              <Form
+                { ...this.state }
+                onInputChange={ this.onInputChange }
+                onSaveButtonClick={ this.onSaveButtonClick }
+              />
+            </div>
           </div>
           <div className="preview-title-container">
-            <h2>Preview</h2>
-            <Card { ...this.state } />
+            <div className="preview-title-subcontainer">
+              <h2 className="title">Preview</h2>
+              <Card { ...this.state } />
+            </div>
           </div>
         </main>
         <Filter

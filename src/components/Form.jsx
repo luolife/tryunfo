@@ -20,7 +20,7 @@ class Form extends Component {
 
     return (
       <form className="form">
-        <label htmlFor="cardName">
+        <label htmlFor="cardName" className="label-up">
           Nome:
           <input
             type="text"
@@ -31,7 +31,7 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="cardDescription">
+        <label htmlFor="cardDescription" className="label-up">
           Descrição:
           <textarea
             data-testid="description-input"
@@ -41,7 +41,7 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="cardAttr1">
+        <label htmlFor="cardAttr1" className="label-up">
           Attr1:
           <input
             type="number"
@@ -52,7 +52,7 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="cardAttr2">
+        <label htmlFor="cardAttr2" className="label-up">
           Attr2:
           <input
             type="number"
@@ -63,7 +63,7 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="cardAttr3">
+        <label htmlFor="cardAttr3" className="label-up">
           Attr3:
           <input
             type="number"
@@ -74,7 +74,7 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="cardImage">
+        <label htmlFor="cardImage" className="label-up">
           Imagem:
           <input
             type="text"
@@ -85,7 +85,7 @@ class Form extends Component {
           />
         </label>
 
-        <label htmlFor="cardRare">
+        <label htmlFor="cardRare" className="label-up">
           Raridade:
           <select
             name="cardRare"
@@ -101,7 +101,6 @@ class Form extends Component {
 
         {!hasTrunfo ? (
           <label htmlFor="cardTrunfo">
-            Super Trunfo:
             <input
               type="checkbox"
               data-testid="trunfo-input"
@@ -109,6 +108,7 @@ class Form extends Component {
               checked={ cardTrunfo }
               onChange={ onInputChange }
             />
+            Super Trunfo
           </label>
         ) : (<p>Você já tem um Super Trunfo em seu baralho</p>)}
 
