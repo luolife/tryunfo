@@ -83,6 +83,7 @@ h1 {
   align-items: center;
   background-color: whitesmoke;
   border-radius: 8px;
+  box-shadow: 0 0 5px grey;
   color: black;
   display: flex;
   height: 400px;
