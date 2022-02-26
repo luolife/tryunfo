@@ -121,6 +121,7 @@ h1 {
 .description-card {
   background-color: rgb(3, 107, 82);
   font-size: 0.7em;
+  height: 53px;
 
   /* por algum motivo existia um espaço entre a descrição e o elemento de cima */
   margin-top: -4px;
@@ -128,7 +129,8 @@ h1 {
 }
 
 .image-card {
-  height: 40%;
+  height: 148px;
+  min-height: 148px;
   object-fit: cover;
   object-position: top;
   width: 100%;
