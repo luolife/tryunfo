@@ -21,7 +21,7 @@ class Form extends Component {
     return (
       <form className="form">
         <label htmlFor="cardName" className="label-up">
-          Nome:
+          Nome
           <input
             type="text"
             data-testid="name-input"
@@ -32,7 +32,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor="cardDescription" className="label-up">
-          Descrição:
+          Descrição
           <textarea
             data-testid="description-input"
             name="cardDescription"
@@ -42,7 +42,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor="cardAttr1" className="label-up">
-          Attr1:
+          Atributo 1
           <input
             type="number"
             data-testid="attr1-input"
@@ -53,7 +53,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor="cardAttr2" className="label-up">
-          Attr2:
+          Atributo 2
           <input
             type="number"
             data-testid="attr2-input"
@@ -64,7 +64,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor="cardAttr3" className="label-up">
-          Attr3:
+          Atributo 3
           <input
             type="number"
             data-testid="attr3-input"
@@ -75,7 +75,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor="cardImage" className="label-up">
-          Imagem:
+          Imagem
           <input
             type="text"
             data-testid="image-input"
@@ -86,7 +86,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor="cardRare" className="label-up">
-          Raridade:
+          Raridade
           <select
             name="cardRare"
             data-testid="rare-input"

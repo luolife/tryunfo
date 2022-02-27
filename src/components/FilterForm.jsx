@@ -10,7 +10,7 @@ class FilterForm extends Component {
     return (
       <form className="form">
         <label htmlFor="nameFilterField" className="label-up">
-          Nome:
+          Nome
           <input
             type="text"
             name="nameFilterField"
@@ -21,7 +21,7 @@ class FilterForm extends Component {
           />
         </label>
         <label htmlFor="rarityFilterField" className="label-up">
-          Raridade:
+          Raridade
           <select
             name="rarityFilterField"
             data-testid="rare-filter"
