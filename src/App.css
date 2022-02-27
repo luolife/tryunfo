@@ -17,6 +17,14 @@ h1 {
   width: 100%;
 }
 
+.filter-deck-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
 .form-title-container {
   align-items: center;
   background-color: whitesmoke;
@@ -26,9 +34,24 @@ h1 {
   width: 50%;
 }
 
+.filter-container {
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  padding: 20px 15px;
+  width: 30%;
+}
+
 .form-title-subcontainer {
   height: 95%;
   width: 50%;
+}
+
+.filter-subcontainer {
+  align-self: flex-start;
+  width: 70%;
 }
 
 .preview-title-container {
@@ -48,10 +71,24 @@ h1 {
   width: 50%;
 }
 
+.card-list {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+  height: 95%;
+  padding: 20px 50px;
+  width: 50%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+.checkbox {
+  margin-right: 5px;
 }
 
 .title {

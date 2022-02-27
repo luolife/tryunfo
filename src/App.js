@@ -155,26 +155,28 @@ class App extends React.Component {
             </div>
           </div>
         </main>
-        <Filter
-          { ...this.state }
-          filterChange={ this.filterChange }
-        />
-        <section className="cardList">
-          {!trunfoFilter
-            ? (filteredCards
-              .map((card) => (<Card
-                key={ card.cardName }
-                deleteBtn
-                deleteCard={ this.deleteCard }
-                { ...card }
-              />)))
-            : (savedCards.filter(({ cardTrunfo }) => cardTrunfo)
-              .map((card) => (<Card
-                key={ card.cardName }
-                deleteCard={ this.deleteCard }
-                deleteBtn
-                { ...card }
-              />)))}
+        <section className="filter-deck-container">
+          <Filter
+            { ...this.state }
+            filterChange={ this.filterChange }
+          />
+          <section className="card-list">
+            {!trunfoFilter
+              ? (filteredCards
+                .map((card) => (<Card
+                  key={ card.cardName }
+                  deleteBtn
+                  deleteCard={ this.deleteCard }
+                  { ...card }
+                />)))
+              : (savedCards.filter(({ cardTrunfo }) => cardTrunfo)
+                .map((card) => (<Card
+                  key={ card.cardName }
+                  deleteCard={ this.deleteCard }
+                  deleteBtn
+                  { ...card }
+                />)))}
+          </section>
         </section>
       </>
     );

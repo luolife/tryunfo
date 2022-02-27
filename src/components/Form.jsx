@@ -102,6 +102,7 @@ class Form extends Component {
         {!hasTrunfo ? (
           <label htmlFor="cardTrunfo">
             <input
+              className="checkbox"
               type="checkbox"
               data-testid="trunfo-input"
               name="cardTrunfo"
