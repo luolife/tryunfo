@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Attribute from './Attribute';
+import RarityTrunfo from './RarityTrunfo';
 
 class Card extends Component {
   render() {
@@ -35,8 +36,7 @@ class Card extends Component {
               <Attribute datatestid="attr1-card" attribute={ cardAttr1 } attNumber="1" />
               <Attribute datatestid="attr2-card" attribute={ cardAttr2 } attNumber="2" />
               <Attribute datatestid="attr3-card" attribute={ cardAttr3 } attNumber="3" />
-              <h3 data-testid="rare-card" className="rare-card">{ cardRare }</h3>
-              { cardTrunfo && <h2 data-testid="trunfo-card">Super Trunfo</h2> }
+              <RarityTrunfo cardRare={ cardRare } cardTrunfo={ cardTrunfo } />
             </div>
           </div>
         </div>
