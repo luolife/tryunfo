@@ -87,10 +87,6 @@ h1 {
   gap: 1em;
 }
 
-.checkbox {
-  margin-right: 5px;
-}
-
 .title {
   font-size: 1.7em;
   margin-bottom: 1em;
@@ -223,4 +219,37 @@ h1 {
   font-size: 1em;
   text-align: center;
   transform: rotate(-25deg);
+}
+
+.label-up input, textarea {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 8px;
+  resize: none;
+}
+
+.label-up input:focus, textarea:focus {
+  border-bottom: 2px solid white;
+  outline-color: #036b52;
+}
+
+.checkbox {
+  height: 20px;
+  margin-right: 5px;
+  padding: 9px;
+  position: relative;
+  top: 4px;
+  width: 20px;
+}
+
+select {
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 4px 0;
+}
+
+select:focus {
+  border-bottom: 2px solid white;
+  outline-color: #036b52;
 }
