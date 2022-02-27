@@ -43,7 +43,7 @@ class FilterForm extends Component {
             data-testid="trunfo-filter"
             onChange={ filterChange }
           />
-          SuperTrybeTrunfo
+          Super Trunfo
         </label>
       </form>
     );
