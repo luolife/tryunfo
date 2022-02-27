@@ -162,6 +162,7 @@ h1 {
   background-color: rgb(3, 107, 82);
   color: whitesmoke;
   font-size: 0.7em;
+  font-weight: 600;
   height: 53px;
 
   /* por algum motivo existia um espaço entre a descrição e o elemento de cima */
