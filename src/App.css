@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+input, textarea, select {
+  font-family: inherit;
+  font-size: 14px;
+}
+
 h1 {
   text-align: center;
 }
@@ -84,12 +89,12 @@ h1 {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.85em;
 }
 
 .title {
   font-size: 1.7em;
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
 }
 
 .form label {
@@ -109,10 +114,6 @@ h1 {
   flex-direction: column;
   gap: 10px;
   max-width: 260px;
-}
-
-.card-with-btn button {
-  width: 50%;
 }
 
 .card {
@@ -252,4 +253,42 @@ select {
 select:focus {
   border-bottom: 2px solid white;
   outline-color: #036b52;
+}
+
+.save-card-btn {
+  background-color: #044344;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: PT Sans , sans-serif;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 9px 0;
+  width: 8em;
+}
+
+.save-card-btn:hover {
+  background-color: #0b6f70;
+}
+
+.save-card-btn:disabled {
+  background-color: rgba(92, 100, 100, 0.698);
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  background-color: rgb(218, 46, 46);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: PT Sans , sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 12px;
+}
+
+.delete-btn:hover {
+  background-color: rgb(241, 81, 81);
 }

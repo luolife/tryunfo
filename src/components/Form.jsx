@@ -114,6 +114,7 @@ class Form extends Component {
         ) : (<p>Você já tem um Super Trunfo em seu baralho</p>)}
 
         <button
+          className="save-card-btn"
           type="button"
           data-testid="save-button"
           disabled={ isSaveButtonDisabled }
