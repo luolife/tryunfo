@@ -100,7 +100,7 @@ class Form extends Component {
         </label>
 
         {!hasTrunfo ? (
-          <label htmlFor="cardTrunfo">
+          <label htmlFor="cardTrunfo" className="form-checkbox-label">
             <input
               className="checkbox"
               type="checkbox"
@@ -111,7 +111,7 @@ class Form extends Component {
             />
             Super Trunfo
           </label>
-        ) : (<p>Você já tem um Super Trunfo em seu baralho</p>)}
+        ) : (<p>Você já tem um Super Trunfo em seu baralho.</p>)}
 
         <button
           className="save-card-btn"

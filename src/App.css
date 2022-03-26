@@ -39,6 +39,10 @@ h1 {
   width: 50%;
 }
 
+.form-checkbox-label {
+  min-height: 40px;
+}
+
 .filter-container {
   align-items: center;
   background-color: whitesmoke;
