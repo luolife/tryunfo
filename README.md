@@ -10,4 +10,4 @@ It is also possible to filter by name and rarity, as well as deleting any card.
 ---
 
 ### Technologies:
-JavaScript, React JS, CSS.
+HTML, JavaScript, React, CSS.

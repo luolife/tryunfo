@@ -100,7 +100,7 @@ class Form extends Component {
         </label>
 
         {!hasTrunfo ? (
-          <label htmlFor="cardTrunfo" className="form-checkbox-label">
+          <label htmlFor="cardTrunfo" className="height-control">
             <input
               className="checkbox"
               type="checkbox"
@@ -111,7 +111,8 @@ class Form extends Component {
             />
             Super Trunfo
           </label>
-        ) : (<p>Você já tem um Super Trunfo em seu baralho.</p>)}
+        // eslint-disable-next-line max-len
+        ) : (<p className="height-control">Você já tem um Super Trunfo em seu baralho.</p>)}
 
         <button
           className="save-card-btn"
