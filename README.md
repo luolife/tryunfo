@@ -1,6 +1,7 @@
 
-![Banner](imgs/tryunfobanner)
-
+<div align="center">
+  <img src="tryunfobanner.png" alt="Banner" />
+</div>
 
 # Projeto Tryunfo
 
@@ -11,9 +12,9 @@ Podem ser criadas com diversas opções e depois de salvas podem ser filtradas e
 
 ## Screenshots
 
-![Tryunfo Screenshot 1](imgs/screenshot1)
+![Tryunfo Screenshot 1](screenshot1.PNG)
 
-![Tryunfo Screenshot 2](imgs/screenshot2)
+![Tryunfo Screenshot 2](screenshot2.PNG)
 
 
 ## Aprendizados
