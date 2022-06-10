@@ -10,7 +10,7 @@ Um projeto feito por mim durante o módulo de Front End na Trybe.
 Consiste em um criador de cartas no estilo Super Trunfo.
 Podem ser criadas com diversas opções e depois de salvas podem ser filtradas e excluídas.
 
-## Site
+## Deploy
 
 A aplicação está disponível pelo github pages, neste [link.](https://brendon-lopes.github.io/tryunfo/)
 
