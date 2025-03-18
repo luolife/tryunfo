@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import Attribute from './Attribute'; // ajuste o caminho se necessário
 
-class Attribute extends Component {
+class CharacterAttributes extends Component {
   render() {
-    const { datatestid, attribute, attNumber } = this.props;
+    const { attribute1, attribute2, attribute3 } = this.props;
+
+    const attributeLabels = {
+      1: 'Força',
+      2: 'Inteligência',
+      3: 'Velocidade',
+    };
+
     return (
-      <div data-testid={ datatestid } className="attribute-container">
-        <p>
-          { `Atributo ${attNumber} ......................` }
-        </p>
-        <h4 className="attribute-value">{ attribute }</h4>
+      <div className="character-attributes">
+        <Attribute
+          datatestid="attr1"
+          attribute={attribute1}
+          label={attributeLabels[1]}
+        />
+        <Attribute
+          datatestid="attr2"
+          attribute={attribute2}
+          label={attributeLabels[2]}
+        />
+        <Attribute
+          datatestid="attr3"
+          attribute={attribute3}
+          label={attributeLabels[3]}
+        />
       </div>
     );
   }
 }
 
-Attribute.propTypes = {
-  datatestid: PropTypes.string,
-  attribute: PropTypes.string,
-}.isRequired;
-
-export default Attribute;
+export default CharacterAttributes;
